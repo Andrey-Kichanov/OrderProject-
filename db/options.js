@@ -9,7 +9,7 @@ const options = {
 };
 
 const dbUrl =
-  'mongodb+srv://romik:1231234@cluster0.pefgd.mongodb.net/BrokolliBlog?retryWrites=true&w=majority';
+  'mongodb+srv://admin:1231234@cluster0.2xypy.mongodb.net/mother_and_child?retryWrites=true&w=majority';
 
 const apiUrl = 'http://localhost:5000/api/v1';
 
