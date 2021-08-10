@@ -1,0 +1,34 @@
+{
+  "name": "orderproject-",
+  "version": "1.0.0",
+  "description": "Hello? world!!!\r #\u0000 \u0000O\u0000r\u0000d\u0000e\u0000r\u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000-\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrey-Kichanov/OrderProject-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrey-Kichanov/OrderProject-/issues"
+  },
+  "homepage": "https://github.com/Andrey-Kichanov/OrderProject-#readme",
+  "dependencies": {
+    "connect-mongo": "^4.4.1",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.1.2",
+    "mongoose": "^5.13.6",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0"
+  }
+}
