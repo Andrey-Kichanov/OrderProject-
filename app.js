@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 const hbs = require("hbs");
 const express = require("express");
 const createError = require("http-errors");
@@ -6,9 +7,9 @@ const path = require("path");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const MongoStore = require("connect-mongo");
-
+const connectToDB = require("./db/connect");
 // Импортируем созданный в отдельный файлах рутеры.
-const indexRouter = require("./routes/index.route");
+// const indexRouter = require("./routes/index.route");
 
 const regRouter = require("./routes/registration.router");
 const loginRouter = require("./routes/authorization.route");
@@ -17,7 +18,7 @@ const logoutRouter = require("./routes/logout.router");
 const { dbUrl } = require("./DB/options");
 
 const app = express();
-const PORT = 5000;
+const PORT = 3000;
 
 // Сообщаем express, что в качестве шаблонизатора используется "hbs".
 app.set("view engine", "hbs");
@@ -60,7 +61,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", indexRouter);
+// app.use("/", indexRouter);
 
 app.use("/registration", regRouter);
 app.use("/login", loginRouter);
