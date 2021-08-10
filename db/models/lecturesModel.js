@@ -12,14 +12,14 @@ const lecturesSchema = new Schema({
     pictureLink: {
         type: String,
         required: true,
-    },
-    audioLink: {
-        type: String,
-        required: true,
-    },
-    videoLink: {
-        type: String,
-    },
+    }
+    // audioLink: {
+    //     type: String,
+    //     required: true,
+    // },
+    // videoLink: {
+    //     type: String,
+    // },
 });
 
 module.exports = model("Lectures", lecturesSchema);
