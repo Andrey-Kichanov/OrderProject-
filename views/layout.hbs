@@ -16,56 +16,33 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script defer src="/scripts/application.js"></script>
+  <script defer src="/script/application.js"></script>
   <!-- JavaScript Bundle with Popper -->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <title>Order</title>
 </head>
-<header>
-  <div>
-    <div class="header-dark">
-      <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-        <div class="container"><a class="navbar-brand" href="/">Company Name</a><button class="navbar-toggler"
-            data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
-              class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav">
-              <li class="nav-item" role="presentation"><a class="nav-link" href="#">Link</a></li>
-              <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown"
-                  aria-expanded="false" href="#">Dropdown </a>
-                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First
-                    Item</a><a class="dropdown-item" role="presentation" href="#">Second
-                    Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-              </li>
-            </ul>
-            <form class="form-inline mr-auto" target="_self">
-              <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input
-                  class="form-control search-field" type="search" name="search" id="search-field"></div>
-            </form>
-            {{#if userId }}
-            <a class="btn btn-light action-button" role="button" href="/logout">Log Out</a>
-            {{else}}
-            <a class="btn btn-light action-button" role="button" href="/login">Log In/Sign Up</a>
-            {{/if}}
-          </div>
-        </div>
-      </nav>
-      <div class="container hero">
-        <div class="row">
-          <div class="col-md-8 offset-md-2">
-            <h1 class="text-center">The Truth is out there.</h1>
 
-          </div>
-        </div>
-      </div>
+<header>
+  <div class="headerTop">
+    <div class="phoneNumber"><a href="tel:+78008888888" class="telephone">Нашем номер: 8-800-888-88-88</a></div>
+    <div class="logIn">
+    <a href="/login">Авторизация/Регистрация</a>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <div class="headerBottom">
+    <div class="firstHead">
+      <div><a href='/'><img src="/img/logo.jpg" alt="Logo" class="logo" ></a></div>
+    </div>
+    <div class="secondHead">
+      <div><a>Курсы</a></div>
+      <div><a>О Нас</a></div>
+      <div><a>Наши спонсоры</a></div>
+      <div><a>Часто Задаваемые Вопросы</a></div>
+    </div>
+  </div>
 </header>
-
 
 <body>
 
