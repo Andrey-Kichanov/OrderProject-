@@ -4,8 +4,7 @@
   "description": "Hello? world!!!\r #\u0000 \u0000O\u0000r\u0000d\u0000e\u0000r\u0000P\u0000r\u0000o\u0000j\u0000e\u0000c\u0000t\u0000-\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -31,11 +30,5 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.0"
-  },
-  "rules": {
-    "max-len": "off"
-  
+  }
 }
-}
-
-

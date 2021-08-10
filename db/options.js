@@ -1,6 +1,3 @@
-/* eslint-disable operator-linebreak */
-/* eslint-disable quotes */
-/* eslint-disable max-len */
 const options = {
   useNewUrlParser: true, // говорим mongoose, что строка подключения будет в новом формате (новый формат должен обязательно содеражт порт)
   useFindAndModify: false, // заставляем методы findOneAndUpdate() и findOneAndRemove() использовать нативный (т.е предоставленный самой mongodb) метод findOneAndUpdate() вместо findAndModify()
@@ -12,8 +9,8 @@ const options = {
 };
 
 const dbUrl =
-  "mongodb+srv://romik:1231234@cluster0.pefgd.mongodb.net/BrokolliBlog?retryWrites=true&w=majority";
+  'mongodb+srv://romik:1231234@cluster0.pefgd.mongodb.net/BrokolliBlog?retryWrites=true&w=majority';
 
-const apiUrl = "http://localhost:5000/api/v1";
+const apiUrl = 'http://localhost:5000/api/v1';
 
 module.exports = { dbUrl, options, apiUrl };

@@ -12,5 +12,7 @@
         "ecmaVersion": 12
     },
     "rules": {
+      "operator-linebreak": "off",
+      "max-len":"off"
     }
 }
