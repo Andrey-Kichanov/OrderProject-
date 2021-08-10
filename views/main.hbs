@@ -1,17 +1,13 @@
 <div class="formsButton">
-   <form action="/faq">
-   <button class="landingBatton" type="submit" name="faq">FaQ</button>
-   </form>
+    <iframe class="video" width="550" height="347" src="https://www.youtube.com/embed/2Wnif4SR8P0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="container">
+  
+   {{#each allCourses}}
+   <div>{{this.title}}</div>
+   <div>{{this.description}}</div>
+   {{/each}}
+  
 
-   <form action="/partners">
-   <button class="landingBatton" type="submit" name="partners">Партнеры</button>
-   </form>
-
-   <form action="/aboute">
-   <button class="landingBatton" type="submit" name="aboute">О компании</button>
-   </form>
-
-   <form action="/courses">
-   <button class="landingBatton" type="submit" name="course">Учебный курс</button>
-   </form>
 </div>

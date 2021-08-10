@@ -192,3 +192,26 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .formsButton{
+    position: relative;
+    width: 750px;
+    height: 431px;
+    margin: auto;
+    padding: 25px 85px 50px;
+    background: url(/img/laptope.png) no-repeat top left;
+    background-size: cover;
+    max-width: 100%;
+  }
+
+  .video{
+    margin-top: 15px;
+    margin-left: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
