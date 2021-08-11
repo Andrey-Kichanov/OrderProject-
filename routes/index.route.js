@@ -1,13 +1,12 @@
 const { Router } = require('express');
 const CourseModel = require('../db/models/courseModel');
+require('../db/models/lecturesModel');
 
 const router = Router();
 
 router.get('/', async (req, res) => {
-  const allCourses = await CourseModel.find();
-  const allTitle = await CourseModel.find().populate('lecturesId');
-  console.log(allTitle);
-  res.render('main', { allCourses });
+  const allTitle = await CourseModel.find().populate('lecturesId').lean();
+  res.render('main', { allTitle });
 });
 
 module.exports = router;
