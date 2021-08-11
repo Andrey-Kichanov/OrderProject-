@@ -214,12 +214,15 @@
   .container{
     display: flex;
     flex-direction: row;
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
 
   .course {
     width: 200px;
-    margin-top: 20px;
+    margin: 40px;
     display: flex;
     flex-direction: column;
     height: 250px;
