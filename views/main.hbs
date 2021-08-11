@@ -1,13 +1,16 @@
 <div class="formsButton">
-    <iframe class="video" width="550" height="347" src="https://www.youtube.com/embed/2Wnif4SR8P0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+  <iframe class="video" width="550" height="347" src="https://www.youtube.com/embed/2Wnif4SR8P0"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
     clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="container">
-  
-   {{#each allCourses}}
-   <div>{{this.title}}</div>
-   <div>{{this.description}}</div>
-   {{/each}}
-  
 
+<div class="container">
+  {{#each allTitle}}
+  <div class="course">
+    <div>{{this.title}}</div>
+    {{#each this.lecturesId}}
+    <div class="lecture">{{this.title}}</div>
+    {{/each}}
+    {{/each}}
+  </div>
 </div>
