@@ -1,37 +1,37 @@
 /* eslint-disable max-len  */
-const hbs = require("hbs");
-const express = require("express");
+const hbs = require('hbs');
+const express = require('express');
 // const createError = require('http-errors');
-const logger = require("morgan");
-const path = require("path");
-const session = require("express-session");
-const cookieParser = require("cookie-parser");
-const MongoStore = require("connect-mongo");
-const connectToDB = require("./db/connect");
+const logger = require('morgan');
+const path = require('path');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const MongoStore = require('connect-mongo');
+const { connectToDB } = require('./db/connect');
 // Импортируем созданный в отдельный файлах рутеры.
 
-const indexRouter = require("./routes/index.route");
-const regRouter = require("./routes/registration.router");
-const loginRouter = require("./routes/authorization.route");
-const logoutRouter = require("./routes/logout.router");
+const indexRouter = require('./routes/index.route');
+const regRouter = require('./routes/registration.router');
+const loginRouter = require('./routes/authorization.route');
+const logoutRouter = require('./routes/logout.router');
 
-const { dbUrl } = require("./db/options");
+const { dbUrl } = require('./db/options');
 
 const app = express();
 const PORT = 5000;
 
 // Сообщаем express, что в качестве шаблонизатора используется "hbs".
-app.set("view engine", "hbs");
+app.set('view engine', 'hbs');
 // Сообщаем express, что шаблона шаблонизаторая (вью) находятся в папке "ПапкаПроекта/views".
-app.set("views", path.join(__dirname, "views"));
-hbs.registerPartials(path.join(__dirname, "views/partials"));
+app.set('views', path.join(__dirname, 'views'));
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
 const optionsForCookie = {
   store: MongoStore.create({
     mongoUrl: dbUrl,
   }),
-  key: "sid",
-  secret: "kkjerpfgwgsdfa",
+  key: 'sid',
+  secret: 'kkjerpfgwgsdfa',
   resave: false,
   saveUninitialized: false,
   cookie: {
@@ -44,9 +44,9 @@ const optionsForCookie = {
 app.use(cookieParser());
 app.use(session(optionsForCookie));
 // Подключаем middleware morgan с режимом логирования "dev", чтобы для каждого HTTP-запроса на сервер в консоль выводилась информация об этом запросе.
-app.use(logger("dev"));
+app.use(logger('dev'));
 // Подключаем middleware, которое сообщает epxress, что в папке "ПапкаПроекта/public" будут находится статические файлы, т.е. файлы доступные для скачивания из других приложений.
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 // Подключаем middleware, которое позволяет читать содержимое body из HTTP-запросов типа POST, PUT и DELETE.
 app.use(express.urlencoded({ extended: true }));
 // Подключаем middleware, которое позволяет читать переменные JavaScript, сохранённые в формате JSON в body HTTP-запроса.
@@ -61,10 +61,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", indexRouter);
-app.use("/registration", regRouter);
-app.use("/login", loginRouter);
-app.use("/logout", logoutRouter);
+app.use('/', indexRouter);
+app.use('/registration', regRouter);
+app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
 // app.use("/", mainRouter);
 
 // Если HTTP-запрос дошёл до этой строчки, значит ни один из ранее встречаемых рутов не ответил на запрос. Это значит, что искомого раздела просто нет на сайте. Для таких ситуаций используется код ошибки 404. Создаём небольшое middleware, которое генерирует соответствующую ошибку.

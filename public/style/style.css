@@ -1,7 +1,8 @@
 .header-dark {
-    background: url('https://cdn.pixabay.com/photo/2015/10/12/14/59/milky-way-984050_960_720.jpg') #444;
+    /* background: url('https://cdn.pixabay.com/photo/2015/10/12/14/59/milky-way-984050_960_720.jpg') #444; */
     background-size: cover;
     padding-bottom: 80px;
+    
   }
 
   @media (min-width:768px) {
@@ -27,13 +28,14 @@
     }
   }
 
+
   .header-dark .navbar .navbar-brand {
     font-weight: bold;
-    color: inherit;
+    color: black;
   }
 
   .header-dark .navbar .navbar-brand:hover {
-    color: #f0f0f0;
+    color: #bd1212;
   }
 
   .header-dark .navbar .navbar-collapse span {
@@ -67,12 +69,12 @@
   }
 
   .header-dark .navbar.navbar-dark .navbar-nav .nav-link {
-    color: #d9d9d9;
+    color: black;
   }
 
   .header-dark .navbar.navbar-dark .navbar-nav .nav-link:focus,
   .header-dark .navbar.navbar-dark .navbar-nav .nav-link:hover {
-    color: #fcfeff !important;
+    color: #1983bd !important;
     background-color: transparent;
   }
 
@@ -81,6 +83,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
     background-color: #fff;
     border-radius: 2px;
+    color: black;
   }
 
   .header-dark .navbar .dropdown-menu .dropdown-item:focus,
@@ -88,7 +91,10 @@
     line-height: 2;
     font-size: 14px;
     color: #37434d;
+    color: black;
+
   }
+
 
   .header-dark .navbar .dropdown-menu .dropdown-item:focus,
   .header-dark .navbar .dropdown-menu .drodown-item:hover {
@@ -157,5 +163,56 @@
       margin-bottom: 50px;
       line-height: 1.5;
     }
+  }
+
+
+  .headerTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .logo{
+    width: 10%;
+  }
+
+  .headerBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .firstHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .secondHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .formsButton{
+    position: relative;
+    width: 750px;
+    height: 431px;
+    margin: auto;
+    padding: 25px 85px 50px;
+    background: url(/img/laptope.png) no-repeat top left;
+    background-size: cover;
+    max-width: 100%;
+  }
+
+  .video{
+    margin-top: 15px;
+    margin-left: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
   }
 
