@@ -26,26 +26,46 @@
 
 <header>
   <div class="headerTop">
-    <div class="phoneNumber"><a href="tel:+78008888888" class="telephone">Нашем номер: 8-800-888-88-88</a></div>
+    <div class="phoneNumber"><a href="tel:+78008888888" class="telephone">Наш номер: 8-800-888-88-88</a></div>
     <div class="logIn">
-    <a href="/login">Авторизация/Регистрация</a>
+      <a onclick="show('block')" class="textDecoration">Авторизация/Регистрация</a>
+      {{!-- <button onclick="show('block')" class="textdecoration">Авторизация/Регистрация</button> --}}
+      <div class="filter" onclick="show('none')">
+        <div class="modalForm">
+          <form>
+            <h1 title="форма регистрации">Регистрация</h1>
+            <div class="group">
+              <label>Имя пользователя</label>
+              <input type="text">
+            </div>
+            <div class="group">
+              <label>пароль</label>
+              <input type="password">
+            </div>
+            <div class="group">
+              <label>email</label>
+              <input type="text">
+            </div>
+            <div class="group">
+              <button>зарегистрироваться</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
   <div class="headerBottom">
     <div class="firstHead">
-      <div><a href='/'><img src="/img/logo.jpg" alt="Logo" class="logo" ></a></div>
-      <div> 1.1 What is infertility
-Definition of infertility
-Infertility is defined as the inability to get pregnant after 12 months or more of well-timed, unprotected intercourse. This definition applies to couples in which the woman is under 36 years old, and both partners do not have histories of fertility-related issues.
-For young and healthy heterosexual couples who have frequent unprotected intercourse, pregnancy occurs in about 85% of cases within 1 year, and 93% of cases within 2 years.
-<img src="/img/lectures/1.1 What is infertility.jpg" >
-</div>
+      <div><a href='/'><img src="/img/logo.jpg" alt="Logo" class="logo"></a></div>
+    </div>
+    <div class="mainPicture">
+      <div><img src="/img/vrachi-v-maskakh.png" alt="doctors" class="doctorImg"></div>
     </div>
     <div class="secondHead">
-      <div><a>Курсы</a></div>
-      <div><a>О Нас</a></div>
-      <div><a>Наши спонсоры</a></div>
-      <div><a>Часто Задаваемые Вопросы</a></div>
+      <div class="main-links"><a>Курсы</a></div>
+      <div class="main-links"><a>О Нас</a></div>
+      <div class="main-links"><a>Наши спонсоры</a></div>
+      <div class="main-links"><a>Часто Задаваемые Вопросы</a></div>
     </div>
   </div>
 </header>
@@ -53,7 +73,6 @@ For young and healthy heterosexual couples who have frequent unprotected interco
 <body>
 
   {{{body}}}
-
 </body>
 
 </html>
