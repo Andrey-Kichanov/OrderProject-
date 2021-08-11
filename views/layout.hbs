@@ -28,30 +28,13 @@
   <div class="headerTop">
     <div class="phoneNumber"><a href="tel:+78008888888" class="telephone">Наш номер: 8-800-888-88-88</a></div>
     <div class="logIn">
-      <a onclick="show('block')" class="textDecoration">Авторизация/Регистрация</a>
+      <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="textDecoration">Авторизация/Регистрация</a>
       {{!-- <button onclick="show('block')" class="textdecoration">Авторизация/Регистрация</button> --}}
-      <div class="filter" onclick="show('none')">
-        <div class="modalForm">
-          <form>
-            <h1 title="форма регистрации">Регистрация</h1>
-            <div class="group">
-              <label>Имя пользователя</label>
-              <input type="text">
-            </div>
-            <div class="group">
-              <label>пароль</label>
-              <input type="password">
-            </div>
-            <div class="group">
-              <label>email</label>
-              <input type="text">
-            </div>
-            <div class="group">
-              <button>зарегистрироваться</button>
-            </div>
-          </form>
-        </div>
-      </div>
+
+
+ 
+
+
     </div>
   </div>
   <div class="headerBottom">
@@ -71,8 +54,44 @@
 </header>
 
 <body>
+      <div id="id01" class="modal">
+  
+  <form class="modal-content1 animate" action="../action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Аватар" class="avatar">
+    </div>
 
+    <div class="container">
+      <label for="uname"><b>Имя пользователя</b></label>
+      <input type="text" placeholder="Введите имя пользователя" name="uname" required>
+
+      <label for="psw"><b>Пароль</b></label>
+      <input type="password" placeholder=" Ведите пароль" name="psw" required>
+        
+      <button type="submit">Пользователь</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Отменить</button>
+      <span class="psw">Забыли <a href="#">пароль?</a></span>
+    </div>
+  </form>
+</div>
   {{{body}}}
 </body>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </html>

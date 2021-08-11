@@ -9,17 +9,17 @@ const lecturesSchema = new Schema({
     type: String,
     required: true,
   },
-  pictureLink: {
-    type: String,
-    required: true,
-  },
+  // pictureLink: {
+  //   type: String,
+  //   required: true,
+  // },
   // audioLink: {
   //     type: String,
   //     required: true,
   // },
-  // videoLink: {
-  //     type: String,
-  // },
+   videoLink: {
+       type: String,
+  }
 });
 
 module.exports = model('Lecture', lecturesSchema);
