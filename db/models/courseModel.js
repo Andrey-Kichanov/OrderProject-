@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const courseSchema = new Schema({
   title: {
@@ -9,16 +9,18 @@ const courseSchema = new Schema({
     type: String,
     required: true,
   },
-  lecturesId: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Lecture',
-    required: true,
-  }],
+  lecturesId: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Lecture",
+      required: true,
+    },
+  ],
   teacher: {
     type: Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
     required: true,
   },
 });
 
-module.exports = model('Course', courseSchema);
+module.exports = model("Course", courseSchema);
