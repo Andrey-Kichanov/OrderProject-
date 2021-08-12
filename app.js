@@ -17,6 +17,8 @@ const regRouter = require('./routes/registration.router');
 const loginRouter = require('./routes/authorization.route');
 const logoutRouter = require('./routes/logout.router');
 const faqRouter = require('./routes/faq.route');
+const courseRouter = require('./routes/courses.route');
+const lecturesRouter = require('./routes/lectures.router');
 
 const { dbUrl } = require('./db/options');
 
@@ -68,9 +70,11 @@ app.use('/', indexRouter);
 app.use('/faq', faqRouter);
 app.use('/login', loginRouter);
 app.use('/aboute', abouteRoute);
+app.use('/course', courseRouter);
 app.use('/logout', logoutRouter);
 app.use('/registration', regRouter);
 app.use('/partners', partnersRouter);
+app.use('/courses/lectures', lecturesRouter);
 // app.use("/", mainRouter);
 
 // Если HTTP-запрос дошёл до этой строчки, значит ни один из ранее встречаемых рутов не ответил на запрос. Это значит, что искомого раздела просто нет на сайте. Для таких ситуаций используется код ошибки 404. Создаём небольшое middleware, которое генерирует соответствующую ошибку.

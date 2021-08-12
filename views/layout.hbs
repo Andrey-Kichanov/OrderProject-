@@ -53,8 +53,8 @@
   			<div class="main-links" ><a>Курсы обучения</a></div>
   			<div class="dropdown-content1" style="-webkit-box-align: center;">
 				<a class="main-links11" href="#" >Курсы обучения</a>
-				{{#each allTitle}}
-    				<a class="main-links11" href="#">{{this.title}}</a>
+				{{#each title}}
+    				<a class="main-links11" href="/course/{{this._id}}">{{this.title}}</a>
     			{{/each}}
   			</div>
 		</div>
@@ -66,7 +66,6 @@
     </div>
   </div>
 </header>
-
 <body>
   <div id="id01" class="modal">
     <form class="login-html animate" style="width: 32%; text-aligin: center; overflow: hidden;">

@@ -1,0 +1,26 @@
+<div class="course-container">
+  <div class='full-course'>
+    {{#if currentCourse}}
+    <h2>
+    {{currentCourse.title}}
+    </h2>
+    <img src="/img/course/{{currentCourse.title}}.jpg" class='full-course-img'>
+    {{#each currentCourse.lecturesId}}
+    <div class="lecture"><a href="/courses/lectures/{{this._id}}">{{this.title}}</a></div>
+    {{/each}}
+    {{/if}}
+  </div>
+
+  <div class="letest-courses">
+    <h4>Последние Курсы</h4>
+    {{#each allCourses}}
+    <div class="letest-courses-item">
+      <img src="/img/course/{{this.title}}.jpg" class="last-courses-img">
+      <div class="letest-courses-description">
+        <div>{{this.title}}</div>
+        <div class="free-sale">Free!</div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
