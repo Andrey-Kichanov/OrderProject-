@@ -185,7 +185,7 @@
 .secondHead {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .formsButton {
@@ -210,9 +210,10 @@
 .container {
   display: flex;
   flex-direction: row;
-  width: 300px;
+  min-width: 300px;
+  max-width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:space-around;
   background-color: #f5f3f8;
 }
 
@@ -221,7 +222,7 @@
   margin: 40px;
   display: flex;
   flex-direction: column;
-  height: 250px;
+  /* height: 250px; */
 }
 
 .lecture {
@@ -234,7 +235,8 @@
   padding: 10px 13px 10px 30px;
   padding-right: 28px;
   padding-left: 28px;
-  margin-left: 14px;
+  margin-left: 50px;
+  margin-right: 50px;
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
@@ -345,7 +347,7 @@
   height: 500;
 }
 
-mainButton{
+.mainButton{
   text-decoration: none;
   color:white
 }
@@ -358,7 +360,7 @@ mainButton{
 .aboutCompany{
   text-align: left;
   margin: 5% 10%;
-  max-width: 1200px;
+  max-width: 100%;
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -432,6 +434,10 @@ span.psw {
   padding-top: 16px;
 }
 
+.question-container{
+  display: flex;
+  flex-direction: row;
+}
 /* Модальный (фон) */
 .modal {
   display: none; /* Скрыто по умолчанию */
@@ -476,6 +482,9 @@ span.psw {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
 }
+.partnerImg{
+  max-width: 100%
+}
 
 @-webkit-keyframes animatezoom {
   from {
@@ -505,3 +514,4 @@ span.psw {
     width: 100%;
   }
 }
+

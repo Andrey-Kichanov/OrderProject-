@@ -1,1 +1,9 @@
-<h1>hello!</h1>
+<div class="container" style="width: 800px;">
+  {{#each partners}}
+  <div class="course">
+    <div><img src={{this.logoLink}} class='partnerImg'></div>
+    <div>{{this.title}}</div>
+    <div>{{this.description}}</div>
+  </div>
+  {{/each}}
+</div>
