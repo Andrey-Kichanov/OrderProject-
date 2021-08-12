@@ -1,0 +1,36 @@
+<header>
+  <div class="headerTop">
+    <div class="phoneNumber"><a href="tel:+78008888888" class="telephone">Наш номер: 8-800-888-88-88</a></div>
+    {{#if user}}
+      <div class="userName">Пользователь:{{user.name}}</div>
+    <div class="logIn">
+      <a class="mainButton" class="textDecoration" href="/logout">Выход</a>
+      {{else}}
+      <div class="logIn">
+      <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="textDecoration">Авторизация/Регистрация</a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="headerBottom">
+    <div class="firstHead">
+		<a href='/' class="logoImg"><img src="/img/logo.jpg" alt="Logo" class="logo"></a>
+	</div>
+	<div class="secondHead">
+		<div class="dropdown1" >
+  			<div class="main-links" ><a>Курсы обучения</a></div>
+  			<div class="dropdown-content1" style="-webkit-box-align: center;">
+				<a class="main-links11" href="#" >Курсы обучения</a>
+				{{#each title}}
+    				<a class="main-links11" href="/course/{{this._id}}">{{this.title}}</a>
+    			{{/each}}
+  			</div>
+		</div>
+      	<div class="main-links"><a href="/aboute" class="mainButton">О Нас</a></div>
+      	<div class="main-links"><a href="/partners" class="mainButton">Наши партнеры</a></div>
+      	<div class="main-links"><a href="/faq" class="mainButton">Часто Задаваемые Вопросы</a></div>
+	</div>
+  </div>
+    </div>
+  </div>
+</header>

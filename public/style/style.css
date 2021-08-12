@@ -249,11 +249,47 @@
   border: none;
 }
 
+.course-container {
+  display: flex;
+}
+
+.last-courses-img{
+  width: 150px;
+  margin-right: 10px;
+}
+
+.letest-courses-description{
+  display: flex;
+  flex-direction: column;
+}
+
+.free-sale{
+  color: green;
+  margin-top: 30px;
+  font-weight:bold;
+}
+
+.full-course-img{
+  width: 500px;
+}
+
+.full-course{
+  width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .dropdown1 {
   position: relative;
   display: inline-block;
 }
 
+.letest-courses-item{
+  flex-direction: row;
+  display: flex;
+  margin: 10px;
+}
 .dropdown-content1 {
   display: none;
   position: absolute;

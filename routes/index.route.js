@@ -6,6 +6,7 @@ const router = Router();
 
 router.get('/', async (req, res) => {
   const allTitle = await CourseModel.find().populate('lecturesId').lean();
+  res.locals.title = allTitle;
   res.render('main', { allTitle });
 });
 
