@@ -345,7 +345,7 @@
   height: 500;
 }
 
-mainButton{
+.mainButton{
   text-decoration: none;
   color:white
 }
