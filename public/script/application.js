@@ -9,12 +9,10 @@ const regPlace = document.querySelector('#btnreg');
 const modalForm = document.querySelector('#id01');
 const loginEmail = document.querySelector('#loginEmail');
 const loginPass = document.querySelector('#loginPass');
+const logPlace = document.querySelector('#bntLog');
+console.log(logPlace);
 
-const loginButton = document.querySelector('#tab-1');
-const regButton = document.querySelector('#tab-2');
-console.log(regButton);
-
-regButton.addEventListener('submit', async (event) => { // регистрация
+regPlace.addEventListener('click', async (event) => { // регистрация
   event.preventDefault();
   console.log('==>>', event.target);
 
@@ -32,7 +30,7 @@ regButton.addEventListener('submit', async (event) => { // регистраци�
     regPlace.appendChild(errorPass);
   } else {
     const newUser = { valueName, valuePass, valueEmail };
-
+    console.log('МЫ ТУТ!');
     const response = await fetch('/registration', {
       method: 'POST',
       headers: {
@@ -49,12 +47,12 @@ regButton.addEventListener('submit', async (event) => { // регистраци�
       errorPass.innerText = 'Данный Email уже используется';
       regPlace.appendChild(errorPass);
     } else if (result.email && result.password) {
-      // modalForm.style.display = 'none';
+      window.location.href = 'http://localhost:5000';
     }
   }
 });
 
-selectQuestion.addEventListener('click', async (event) => { // вывод вопросов-ответов
+selectQuestion?.addEventListener('click', async (event) => { // вывод вопросов-ответов
   // console.log(event.target.id);
   const buttonId = event.target.id;
 
@@ -69,9 +67,9 @@ selectQuestion.addEventListener('click', async (event) => { // вывод воп
   }
 });
 
-loginButton.addEventListener('submit', async (event) => {
+logPlace.addEventListener('click', async (event) => {
   event.preventDefault();
-  console.log(event.target);
+  console.log('==', event.target);
 
   const emailValue = loginEmail.value;
   const passValue = loginPass.value;
@@ -87,5 +85,7 @@ loginButton.addEventListener('submit', async (event) => {
   });
 
   const result = await response.json();
-  console.log(result);
+  if (result.enter) {
+    window.location.href = 'http://localhost:5000';
+  }
 });

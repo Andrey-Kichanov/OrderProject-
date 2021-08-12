@@ -19,6 +19,11 @@
   justify-content: space-between;
 }
 
+.logoImg{
+  display: flex;
+  justify-content: center;
+}
+
 .firstHead {
   display: flex;
   flex-direction: column;
@@ -161,8 +166,10 @@
 }
 
 .phoneNumber {
-  display: inline-block;
-  padding: 15px 19px;
+  display: flex;
+  align-items: center;
+  /* display: inline-block;
+  padding: 15px 19px; */
   font-size: 16px;
   line-height: 100%;
   font-family: HelveticaNeueCyr, "Helvetica", sans-serif;
@@ -226,6 +233,13 @@
   background-color: #f5f3f8;
 }
 
+.userName{
+  color:#572f8e;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+}
 /*---------------------------------------------------*/
 .dropbtn1 {
   background-color: #4caf50;
