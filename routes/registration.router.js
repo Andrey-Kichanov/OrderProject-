@@ -7,25 +7,21 @@ const router = express.Router();
 
 router
   .route("/")
-  .get((req, res) => {
-    let errorDescription = "";
-    const { error } = req.query;
-    if (error === "alreadyRegistr") {
-      errorDescription = "Такой email уже занят";
-    }
-    res.render("registration", { errorDescription });
-  })
   .post(async (req, res) => {
+    // console.log(req.body);
     try {
-      const { userName, password, email } = req.body;
-      const newUser = await User.findOne({ email });
+      const { valueName, valuePass, valueEmail } = req.body;
+
+      const newUser = await User.findOne({ email: valueEmail });
+      console.log(newUser);
       if (newUser) {
-        return res.redirect("/registration/?error=alreadyRegistr");
+        const error = { message: 'Такой пользователь уже найден' };
+        return res.json(error);
       }
-      const user = await User.create({ userName, password, email });
+      const user = await User.create({ name: valueName, password: valuePass, email: valueEmail });
 
       req.session.user = user;
-      res.redirect("/");
+      res.json(user);
     } catch (error) {
       console.log(error);
       res.sendStatus(418);

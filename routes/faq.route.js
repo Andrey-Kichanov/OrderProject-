@@ -5,7 +5,7 @@ const router = Router();
 
 router.get('/', async (req, res) => {
   const allModel = await faqModel.find();
-  res.render('faq', {allModel});
+  res.render('faq', { allModel });
 });
 
 router.post('/:id', async (req, res) => {

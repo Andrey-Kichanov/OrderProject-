@@ -8,33 +8,21 @@ const router = Router();
 
 router
   .route("/")
-  .get((req, res) => {
-    let errorDiscription = "";
-    const { error } = req.query;
-    console.log(error);
-    if (error === "UserNotFound") {
-      errorDiscription = "Пользователь не найден, зарегистрируйтесь";
-    }
-    if (error === "incorrectPassword") {
-      errorDiscription = "Вы ввели неправильный пароль";
-      console.log(errorDiscription);
-    }
-    res.render("auth", { errorDiscription });
-  })
   .post(async (req, res) => {
     try {
-      const { email, password } = req.body;
-      const checkedUser = await User.findOne({ email });
-
+      const { emailValue, passValue } = req.body;
+      const checkedUser = await User.findOne({ email: emailValue });
+      
       if (!checkedUser) {
-        return res.redirect("/login/?error=UserNotFound");
+        const message = 'Пользователдь не найден, зарегистрируйтесь';
+        return res.send(message);
       }
       if (checkedUser.password !== password) {
         return res.redirect("/login/?error=incorrectPassword");
       }
 
       req.session.user = checkedUser;
-      res.redirect("/");
+      res.json({ enter: true });
     } catch (error) {
       console.log(error);
       res.sendStatus(418);

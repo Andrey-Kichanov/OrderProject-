@@ -7,9 +7,9 @@ const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
+const bodyParser = require('body-parser');
 const { connectToDB } = require('./db/connect');
 // Импортируем созданный в отдельный файлах рутеры.
-
 const partnersRouter = require('./routes/partners.route');
 const abouteRoute = require('./routes/aboute.route');
 const indexRouter = require('./routes/index.route');

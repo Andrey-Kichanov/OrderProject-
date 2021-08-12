@@ -455,6 +455,12 @@ span.psw {
   text-decoration: none;
 } */
 
+.answers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .login-wrap1 {
   width: 100%;
   margin: auto;
@@ -597,7 +603,7 @@ span.psw {
 
 .hr {
   height: 2px;
-  margin: 30px 0 30px 0;
+  margin: 10px 0 30px 0;
   background: #572f8e;
 }
 .foot-lnk {
