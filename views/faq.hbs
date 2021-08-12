@@ -1,10 +1,8 @@
 <div class="question-container">
   <div class="menu-question">
-    <button>Вопрос1</button>
-    <button>Вопрос2</button>
-    <button>Вопрос3</button>
-    <button>Вопрос4</button>
-    <button>Вопрос5</button>
+    {{#each allModel}}
+    <button class="questButton" id="{{this._id}}">{{this.title}}</button>
+    {{/each}}
   </div>
   <div class="answers">
     <p>Ответ</p>

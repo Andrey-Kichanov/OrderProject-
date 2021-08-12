@@ -437,6 +437,9 @@ span.psw {
 .question-container{
   display: flex;
   flex-direction: row;
+  border-width:1;
+  border-color: #572f8e;
+  border-style: solid;
 }
 /* Модальный (фон) */
 .modal {
@@ -482,10 +485,18 @@ span.psw {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
 }
+
 .partnerImg{
   max-width: 100%
 }
 
+.menu-question{
+  max-width: 23%;
+}
+
+.questButton{
+  /* border-radius: 10%; */
+}
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
