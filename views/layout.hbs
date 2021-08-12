@@ -53,7 +53,7 @@
 
 <body>
   <div id="id01" class="modal">
-    <form class="login-html animate" action="../action_page.php" method="post" style="width: 32%; text-aligin: center; overflow: hidden;">
+    <form class="login-html animate" style="width: 32%; text-aligin: center; overflow: hidden;">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть Modal1">&times;</span>
       </div>
@@ -66,11 +66,11 @@
 			<div class="sign-in-htm">
 				<div class="group">
 					<label for="user" class="label">@email</label>
-					<input id="email" type="text" class="input">
+					<input id="loginEmail" type="text" class="input">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Пароль</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="loginpass" type="password" class="input" data-type="password">
 				</div>
 				
 				<div class="group">
@@ -81,24 +81,24 @@
 					<a href="#forgot">Забыли пароль?</a>
 				</div>
 			</div>
-			<div class="sign-up-htm">
+			<div class="sign-up-htm" id="registration">
 				<div class="group">
 					<label for="user" class="label">Имя пользователя</label>
-					<input id="user" type="text" class="input">
+					<input id="user" type="text" class="input" name="userName">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Пароль</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="regPass" type="password" class="input" data-type="password" name="password">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Повтор пароля</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="regRepPass" type="password" class="input" data-type="password" name="repPassword">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">@email</label>
-					<input id="pass" type="text" class="input">
+					<input id="regEmail" type="text" class="input" name="email">
 				</div>
-				<div class="group">
+				<div class="group" id="btnreg">
 					<input type="submit" class="button" value="Зарегистрироваться">
 				</div>
 				<div class="hr"></div>
