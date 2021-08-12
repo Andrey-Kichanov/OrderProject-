@@ -1,9 +1,11 @@
-const { Router } = require("express");
+const { Router } = require('express');
+const PartnerModel = require('../db/models/partnerModel');
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.render("partners");
+router.get('/', async (req, res) => {
+  const partners = await PartnerModel.find();
+  res.render('partners', { partners });
 });
 
 module.exports = router;

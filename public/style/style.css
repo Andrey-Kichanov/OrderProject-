@@ -1,3 +1,7 @@
+/* *{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 110%;
+} */
 .headerTop {
   background: #f2f0f6;
   display: flex;
@@ -24,7 +28,7 @@
 .secondHead {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .formsButton {
@@ -49,9 +53,10 @@
 .container {
   display: flex;
   flex-direction: row;
-  width: 300px;
+  min-width: 300px;
+  max-width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:space-around;
   background-color: #f5f3f8;
 }
 
@@ -60,7 +65,7 @@
   margin: 40px;
   display: flex;
   flex-direction: column;
-  height: 250px;
+  /* height: 250px; */
 }
 
 .lecture {
@@ -73,7 +78,8 @@
   padding: 10px 13px 10px 30px;
   padding-right: 28px;
   padding-left: 28px;
-  margin-left: 14px;
+  margin-left: 50px;
+  margin-right: 50px;
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
@@ -183,7 +189,7 @@
 .aboutCompany{
   text-align: left;
   margin: 5% 10%;
-  max-width: 1200px;
+  max-width: 100%;
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -216,7 +222,7 @@ input[type="password"] {
 
 /* Установите стиль для всех кнопок */
 button {
-  background-color: #8e2f2f;
+  background-color: #572f8e;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -257,6 +263,13 @@ span.psw {
   padding-top: 16px;
 }
 
+.question-container{
+  display: flex;
+  flex-direction: row;
+  border-width:1;
+  border-color: #572f8e;
+  border-style: solid;
+}
 /* Модальный (фон) */
 .modal {
   text-align: -webkit-center;
@@ -284,6 +297,8 @@ span.psw {
 /* Кнопка закрытия (x) */
 .close {
   position: absolute;
+  z-index: 2;
+  margin-right: 10px;
   right: 25px;
   top: 0;
   color: #000;
@@ -303,6 +318,17 @@ span.psw {
   animation: animatezoom 0.6s;
 }
 
+.partnerImg{
+  max-width: 100%
+}
+
+.menu-question{
+  max-width: 23%;
+}
+
+.questButton{
+  /* border-radius: 10%; */
+}
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0);
@@ -331,9 +357,6 @@ span.psw {
     width: 100%;
   }
 }
-
-/*--------------------------------*/
-
 *,
 :after,
 :before {
@@ -348,10 +371,10 @@ span.psw {
   clear: both;
   display: block;
 }
-a {
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 .login-wrap1 {
   width: 100%;
@@ -367,7 +390,7 @@ a {
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: 90px 70px 50px 70px;
+  padding: 50px 70px 50px 70px;
   background: #ffe49e;
 }
 .login-html .sign-in-htm,
@@ -495,7 +518,7 @@ a {
 
 .hr {
   height: 2px;
-  margin: 60px 0 50px 0;
+  margin: 30px 0 30px 0;
   background: #572f8e;
 }
 .foot-lnk {
