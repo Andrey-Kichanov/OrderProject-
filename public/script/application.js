@@ -6,10 +6,17 @@ const regPassword = document.querySelector('#regPass');
 const regEmail = document.querySelector('#regEmail');
 const regRepPassword = document.querySelector('#regRepPass');
 const regPlace = document.querySelector('#btnreg');
-console.log(regForm);
+const modalForm = document.querySelector('#id01');
+const loginEmail = document.querySelector('#loginEmail');
+const loginPass = document.querySelector('#loginPass');
 
-regForm.addEventListener('submit', async (event) => {
+const loginButton = document.querySelector('#tab-1');
+const regButton = document.querySelector('#tab-2');
+console.log(regButton);
+
+regButton.addEventListener('submit', async (event) => { // регистрация
   event.preventDefault();
+  console.log('==>>', event.target);
 
   const valueName = regName.value;
   const valuePass = regPassword.value;
@@ -34,11 +41,20 @@ regForm.addEventListener('submit', async (event) => {
       body: JSON.stringify(newUser),
     });
     const result = await response.json();
-    console.log(result);
+    if (result.message) {
+      const errorPass = document.createElement('p');
+      errorPass.style.marginTop = '10px';
+      errorPass.style.marginBottom = '0px';
+      errorPass.style.color = 'red';
+      errorPass.innerText = 'Данный Email уже используется';
+      regPlace.appendChild(errorPass);
+    } else if (result.email && result.password) {
+      // modalForm.style.display = 'none';
+    }
   }
 });
 
-selectQuestion.addEventListener('click', async (event) => {
+selectQuestion.addEventListener('click', async (event) => { // вывод вопросов-ответов
   // console.log(event.target.id);
   const buttonId = event.target.id;
 
@@ -51,4 +67,25 @@ selectQuestion.addEventListener('click', async (event) => {
     console.log(result.answer);
     answersPlace.innerText = result.currentFaq.answer;
   }
+});
+
+loginButton.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  console.log(event.target);
+
+  const emailValue = loginEmail.value;
+  const passValue = loginPass.value;
+
+  const User = { emailValue, passValue };
+
+  const response = await fetch('/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(User),
+  });
+
+  const result = await response.json();
+  console.log(result);
 });

@@ -34,8 +34,11 @@
   <div class="headerTop">
     <div class="phoneNumber"><a href="tel:+78008888888" class="telephone">Наш номер: 8-800-888-88-88</a></div>
     <div class="logIn">
+      {{#if user}}
+      <a style="width:auto;" class="textDecoration" href="/logout">Выход</a>
+      {{else}}
       <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="textDecoration">Авторизация/Регистрация</a>
-      {{!-- <button onclick="show('block')" class="textdecoration">Авторизация/Регистрация</button> --}}
+      {{/if}}
     </div>
   </div>
   <div class="headerBottom">
@@ -57,7 +60,6 @@
       <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть Modal1">&times;</span>
       </div>
-
         <div class="login-wrap1">
 		<div class="login-html1">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Авторизация</label>
@@ -70,7 +72,7 @@
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Пароль</label>
-					<input id="loginpass" type="password" class="input" data-type="password">
+					<input id="loginPass" type="password" class="input" data-type="password">
 				</div>
 				
 				<div class="group">
@@ -111,16 +113,9 @@
 </div>
   </form>
 </div> 
-    
- 
-</div>
-
-
-
-
   {{{body}}}
 </body>
-<script>
+{{!-- <script>
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -130,5 +125,5 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-</script>
+</script> --}}
 </html>
