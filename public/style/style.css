@@ -1,164 +1,7 @@
-.header-dark {
-  /* background: url('https://cdn.pixabay.com/photo/2015/10/12/14/59/milky-way-984050_960_720.jpg') #444; */
-  background-size: cover;
-  padding-bottom: 80px;
-}
-
-@media (min-width: 768px) {
-  .header-dark {
-    padding-bottom: 120px;
-  }
-}
-
-.header-dark .navbar {
-  background: transparent;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: #fff;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
-}
-
-@media (min-width: 768px) {
-  .header-dark .navbar {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-.header-dark .navbar .navbar-brand {
-  font-weight: bold;
-  color: black;
-}
-
-.header-dark .navbar .navbar-brand:hover {
-  color: #bd1212;
-}
-
-.header-dark .navbar .navbar-collapse span {
-  margin-top: 5px;
-}
-
-.header-dark .navbar .navbar-toggler {
-  border-color: #747474;
-}
-
-.header-dark .navbar .navbar-toggler:hover,
-.header-dark .navbar-toggler:focus {
-  background: none;
-}
-
-.header-dark .navbar .navbar-toggler {
-  color: #eee;
-}
-
-.header-dark .navbar .navbar-collapse,
-.header-dark .navbar .form-inline {
-  border-color: #636363;
-}
-
-@media (min-width: 992px) {
-  .header-dark .navbar.navbar .navbar-nav .nav-link {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-  }
-}
-
-.header-dark .navbar.navbar-dark .navbar-nav .nav-link {
-  color: black;
-}
-
-.header-dark .navbar.navbar-dark .navbar-nav .nav-link:focus,
-.header-dark .navbar.navbar-dark .navbar-nav .nav-link:hover {
-  color: #1983bd !important;
-  background-color: transparent;
-}
-
-.header-dark .navbar .navbar-nav > li > .dropdown-menu {
-  margin-top: -5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  border-radius: 2px;
-  color: black;
-}
-
-.header-dark .navbar .dropdown-menu .dropdown-item:focus,
-.header-dark .navbar .dropdown-menu .dropdown-item {
-  line-height: 2;
-  font-size: 14px;
-  color: #37434d;
-  color: black;
-}
-
-.header-dark .navbar .dropdown-menu .dropdown-item:focus,
-.header-dark .navbar .dropdown-menu .drodown-item:hover {
-  background: #ebeff1;
-}
-
-.header-dark .navbar .action-button,
-.header-dark .navbar .action-button:active {
-  color: #fff;
-  background-color: #37434d00;
-  border-radius: 20px;
-  font-size: inherit;
-  box-shadow: none;
-  border: none;
-  text-shadow: none;
-  padding: 0.5rem 0.8rem;
-  transition: background-color 0.25s;
-}
-
-.header-dark .navbar .action-button:hover {
-  background: #269d9d;
-}
-
-.header-dark .navbar .form-inline label {
-  color: #ccc;
-}
-
-.header-dark .navbar .form-inline .search-field {
-  display: inline-block;
-  width: 80%;
-  background: none;
-  border: none;
-  border-bottom: 1px solid transparent;
-  border-radius: 0;
-  color: #ccc;
-  box-shadow: none;
-  color: inherit;
-  transition: border-bottom-color 0.3s;
-}
-
-.header-dark .navbar .form-inline .search-field:focus {
-  border-bottom: 1px solid #ccc;
-}
-
-.header-dark .hero {
-  margin-top: 60px;
-}
-
-@media (min-width: 768px) {
-  .header-dark .hero {
-    margin-top: 20px;
-  }
-}
-
-.header-dark .hero h1 {
-  color: #fff;
-  font-family: "Bitter", serif;
-  font-size: 40px;
-  margin-top: 20px;
-  margin-bottom: 80px;
-}
-
-@media (min-width: 768px) {
-  .header-dark .hero h1 {
-    margin-bottom: 50px;
-    line-height: 1.5;
-  }
-}
-
+/* *{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 110%;
+} */
 .headerTop {
   background: #f2f0f6;
   display: flex;
@@ -332,20 +175,6 @@
   z-index: 100;
   display: none;
 }
-.modalForm {
-  background-color: rgb(0, 103, 103);
-  height: 200px;
-  position: fixed;
-  top: 100;
-  right: 0;
-  left: 0;
-  bottom: 100;
-  z-index: 150;
-  display: none;
-  margin: 0 auto;
-  width: 450px;
-  height: 500;
-}
 
 .mainButton{
   text-decoration: none;
@@ -443,14 +272,15 @@ span.psw {
 }
 /* Модальный (фон) */
 .modal {
+  text-align: -webkit-center;
   display: none; /* Скрыто по умолчанию */
   position: fixed; /* Оставаться на месте */
-  z-index: 1; /* Сидеть на вершине */
+  z-index: 0; /* Сидеть на вершине */
   left: 0;
   top: 0;
   width: 50%; /* Полная ширина */
   height: 50%; /* Полная высота */
-  overflow: auto; /* Включите прокрутку, если это необходимо */
+  /* Включите прокрутку, если это необходимо */
   background-color: rgb(0, 0, 0); /* Цвет запасной вариант  */
   background-color: rgba(0, 0, 0, 0.4); /*Черный с непрозрачностью */
   padding-top: 60px;
@@ -467,6 +297,8 @@ span.psw {
 /* Кнопка закрытия (x) */
 .close {
   position: absolute;
+  z-index: 2;
+  margin-right: 10px;
   right: 25px;
   top: 0;
   color: #000;
@@ -525,4 +357,171 @@ span.psw {
     width: 100%;
   }
 }
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  display: block;
+}
+/* a {
+  color: inherit;
+  text-decoration: none;
+} */
 
+.login-wrap1 {
+  width: 100%;
+  margin: auto;
+  max-width: 525px;
+  min-height: 670px;
+  position: relative;
+
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.login-html1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 50px 70px 50px 70px;
+  background: #ffe49e;
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 0.4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check {
+  display: none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+  text-transform: uppercase;
+}
+.login-html .tab {
+  font-size: 22px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  margin: 0 15px 10px 0;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab {
+  color: #fff;
+  border-color: #572f8e;
+}
+.login-form {
+  min-height: 345px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.login-form .group {
+  margin-bottom: 15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button {
+  width: 100%;
+  color: #4f4f4f;
+  display: block;
+  border-radius: 25px;
+}
+.login-form .group .input,
+.login-form .group .button {
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+}
+.login-form .group input[data-type="password"] {
+  background: #fff;
+  text-security: circle;
+  -webkit-text-security: circle;
+}
+.login-form .group .label {
+  color: #4f4f4f;
+  font-size: 12px;
+}
+.login-form .group .button {
+  color: #fff;
+  background: #572f8e;
+}
+.login-form .group label .icon {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transition: all 0.2s ease-in-out 0s;
+}
+.login-form .group label .icon:before {
+  left: 3px;
+  width: 5px;
+  bottom: 6px;
+  transform: scale(0) rotate(0);
+}
+.login-form .group label .icon:after {
+  top: 6px;
+  right: 0;
+  transform: scale(0) rotate(0);
+}
+.login-form .group .check:checked + label {
+  color: #fff;
+}
+.login-form .group .check:checked + label .icon {
+  background: #1161ee;
+}
+.login-form .group .check:checked + label .icon:before {
+  transform: scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after {
+  transform: scale(1) rotate(-45deg);
+}
+.login-html
+  .sign-in:checked
+  + .tab
+  + .sign-up
+  + .tab
+  + .login-form
+  .sign-in-htm {
+  transform: rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+  transform: rotate(0);
+}
+
+.hr {
+  height: 2px;
+  margin: 30px 0 30px 0;
+  background: #572f8e;
+}
+.foot-lnk {
+  color: #572f8e;
+  text-align: center;
+}

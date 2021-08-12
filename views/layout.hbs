@@ -10,6 +10,12 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <!-- CSS only -->
 
+{{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
+
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
@@ -46,33 +52,72 @@
 </header>
 
 <body>
-      <div id="id01" class="modal">
-  
-  <form class="modal-content1 animate" action="../action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Аватар" class="avatar">
-    </div>
+  <div id="id01" class="modal">
+    <form class="login-html animate" action="../action_page.php" method="post" style="width: 32%; text-aligin: center; overflow: hidden;">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Закрыть Modal1">&times;</span>
+      </div>
 
-    <div class="container">
-      <label for="uname"><b>Имя пользователя</b></label>
-      <input type="text" placeholder="Введите имя пользователя" name="uname" required>
-
-      <label for="psw"><b>Пароль</b></label>
-      <input type="password" placeholder=" Ведите пароль" name="psw" required>
-        
-      <button type="submit">Пользователь</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Запомнить меня
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Отменить</button>
-      <span class="psw">Забыли <a href="#">пароль?</a></span>
-    </div>
-  </form>
+        <div class="login-wrap1">
+		<div class="login-html1">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Авторизация</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Регистрация</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">@email</label>
+					<input id="email" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Пароль</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				
+				<div class="group">
+					<input type="submit" class="button" value="Авторизироваться">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Забыли пароль?</a>
+				</div>
+			</div>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Имя пользователя</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Пароль</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Повтор пароля</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">@email</label>
+					<input id="pass" type="text" class="input">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Зарегистрироваться">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<label for="tab-1">Нажимая на кнопку Вы соглашаетесь с политикой конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+  </form>
+</div> 
+    
+ 
+</div>
+
+
+
+
   {{{body}}}
 </body>
 <script>
