@@ -112,7 +112,3 @@ selectLectures.addEventListener('click', async (event) => { // вывод лек
   }
 });
 
-/**
- * http://localhost:5000/courses/lectures/6113c77121f9682be4c9d037/lesson/123123123123
- * /courses/lectures/:id/lesson/:lessonId
- */
