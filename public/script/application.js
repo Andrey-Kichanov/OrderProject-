@@ -1,5 +1,7 @@
 const selectQuestion = document.querySelector('.menu-question');
+const selectLectures = document.querySelector('.lecturesList');
 const answersPlace = document.querySelector('.answers');
+const lecturesPlace = document.querySelector('.lecturesDiv');
 const regForm = document.querySelector('.login-html');
 const regName = document.querySelector('#user');
 const regPassword = document.querySelector('#regPass');
@@ -87,5 +89,20 @@ logPlace.addEventListener('click', async (event) => {
   const result = await response.json();
   if (result.enter) {
     window.location.href = 'http://localhost:5000';
+  }
+});
+console.log("selectLectures----",selectLectures);
+selectLectures?.addEventListener('click', async (event) => { // вывод вопросов-ответов
+  // console.log(event.target.id);
+  const buttonId = event.target.id;
+console.log("-------->",buttonId);
+  const response = await fetch(`/courses/${buttonId}`, {
+    method: 'POST',
+  });
+
+  const result = await response.json();
+  if (result) {
+    //console.log(result.urrentLectures);
+    lecturesPlace.innerHTML = result.currentLectures.description;
   }
 });

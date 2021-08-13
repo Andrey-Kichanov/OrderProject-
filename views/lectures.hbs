@@ -1,5 +1,31 @@
+<div class="question-container">
+  <div class="menu-lectures">
+    <div class="lecturesList">
+      
+    {{#if allLectures}}
+        <div class="couseList">{{allLectures.title}}</div>
+        {{#each allLectures.lecturesId}}
+            <div class="lecturesN" style="background: cyan;"  id="{{this._id}}">{{this.title}}</div>
+        {{/each}}
+    {{/if}}
+  </div>
+    </div>
+  <div class="lecturesDiv">
+      {{#if currentLecture}}
+        {{#if vlink}}
+            <video src={{vlink}} width="500px" controls="controls"></video>
+        {{/if}}
+        <div>{{currentLecture}}</div>
+      {{/if}}
+  </div>
+</div>
 
-{{#if user}}
+
+
+
+
+
+{{!-- {{#if user}}
 {{#if currentLecture}}
 <div>
   {{currentLecture.title}}
@@ -13,4 +39,4 @@
 {{/if}}
 {{else}}
 <div>Вам нужно зарегистрироваться или зайти в аккаунт!</div>
-{{/if}}
+{{/if}} --}}
