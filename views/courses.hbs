@@ -1,0 +1,16 @@
+<div class="question-container">
+  <div class="menu-lectures">
+    <div class="lecturesList">
+    {{#each allLectures}}
+    <div class="couseList">{{this.title}}</div>
+    {{#each this.lecturesId}}
+    
+      <div class="lecturesN" style="background: cyan;"  id="{{this._id}}">{{this.title}}</div>
+    {{/each}}
+    {{/each}}
+  </div>
+    </div>
+  <div class="lecturesDiv">
+      <p>Выбирите вопрос в левом меню</p>
+  </div>
+</div>

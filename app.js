@@ -18,6 +18,7 @@ const loginRouter = require('./routes/authorization.route');
 const logoutRouter = require('./routes/logout.router');
 const faqRouter = require('./routes/faq.route');
 const courseRouter = require('./routes/courses.route');
+const coursesRouter = require('./routes/coursess.route');
 const lecturesRouter = require('./routes/lectures.router');
 
 const { dbUrl } = require('./db/options');
@@ -77,6 +78,7 @@ app.use('/faq', faqRouter);
 app.use('/login', loginRouter);
 app.use('/aboute', abouteRoute);
 app.use('/course', courseRouter);
+app.use('/courses', coursesRouter);
 app.use('/logout', logoutRouter);
 app.use('/registration', regRouter);
 app.use('/partners', partnersRouter);
