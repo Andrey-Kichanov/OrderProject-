@@ -8,7 +8,6 @@ router
   .get(async (req, res) => {
     const allCourses = await CourseModel.find();
     const currentCourse = await CourseModel.findById(req.params.id).populate('lecturesId').lean();
-
     res.render('course', { currentCourse, allCourses });
   });
 

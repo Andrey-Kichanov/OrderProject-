@@ -4,9 +4,9 @@
     <h2>
     {{currentCourse.title}}
     </h2>
-    <img src="/img/course/{{currentCourse.title}}.jpg" class='full-course-img'>
+    <a href="/courses/{{currentCourse._id}}"><img src="/img/course/{{currentCourse.title}}.jpg" class='full-course-img'></a>
     {{#each currentCourse.lecturesId}}
-    <div class="lecture"><a href="/courses/lectures/{{this._id}}">{{this.title}}</a></div>
+    <div class="lecture"><a href="/courses/{{this.title}}/lectures/{{this._id}}">{{this.title}}</a></div>
     {{/each}}
     {{/if}}
   </div>
@@ -15,7 +15,7 @@
     <h4>Последние Курсы</h4>
     {{#each allCourses}}
     <div class="letest-courses-item">
-      <img src="/img/course/{{this.title}}.jpg" class="last-courses-img">
+      <a href="/courses/{{this._id}}"><img src="/img/course/{{this.title}}.jpg" class="last-courses-img"></a>
       <div class="letest-courses-description">
         <div>{{this.title}}</div>
         <div class="free-sale">Free!</div>

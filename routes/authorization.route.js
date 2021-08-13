@@ -12,10 +12,10 @@ router
     try {
       const { emailValue, passValue } = req.body;
       const checkedUser = await User.findOne({ email: emailValue, password: passValue });
-      console.log(checkedUser)
+      console.log(checkedUser);
       if (!checkedUser) {
         const message = 'Пользователдь не найден, зарегистрируйтесь';
-        return res.send(message);
+        return res.json({ message });
       }
       if (checkedUser.password !== passValue) {
         return res.redirect("/login/?error=incorrectPassword");

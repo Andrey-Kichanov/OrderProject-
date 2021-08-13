@@ -86,19 +86,29 @@ logPlace.addEventListener('click', async (event) => {
   });
 
   const result = await response.json();
+  console.log(result);
+
+  if (result.message) {
+    const errorPass = document.createElement('p');
+    errorPass.style.marginTop = '10px';
+    errorPass.style.marginBottom = '0px';
+    errorPass.style.color = 'red';
+    errorPass.innerText = 'Логин или пароль не верны';
+    logPlace.appendChild(errorPass);
+  }
   if (result.enter) {
     window.location.href = 'http://localhost:5000';
   }
 });
 
-selectLectures.addEventListener('click', async (event) => { // вывод лекций
+selectLectures?.addEventListener('click', async (event) => { // вывод лекций
   console.log(event.target.parentNode.parentNode);
   const courseId = event.target.parentNode.parentNode.firstElementChild.id;
   const buttonId = event.target.id;
 
   console.log(buttonId);
 
-  const response = await fetch(`/courses/lectures/${courseId}/lesson/${buttonId}`, {
+  const response = await fetch(`/courses/${courseId}/lectures/${buttonId}`, {
     method: 'GET',
   });
 
@@ -111,4 +121,3 @@ selectLectures.addEventListener('click', async (event) => { // вывод лек
     }
   }
 });
-
