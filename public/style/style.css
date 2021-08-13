@@ -75,7 +75,7 @@
 .container-of-all-features{
   display: flex;
   flex-direction: row;
-  margin: 30px
+  margin: 30px;
 }
 
 .course {

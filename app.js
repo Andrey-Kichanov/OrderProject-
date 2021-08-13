@@ -7,8 +7,8 @@ const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
-const bodyParser = require('body-parser');
 const { connectToDB } = require('./db/connect');
+const CourseModel = require('./db/models/courseModel');
 // Импортируем созданный в отдельный файлах рутеры.
 const partnersRouter = require('./routes/partners.route');
 const abouteRoute = require('./routes/aboute.route');
@@ -57,6 +57,12 @@ app.use(express.urlencoded({ extended: true }));
 // Подключаем middleware, которое позволяет читать переменные JavaScript, сохранённые в формате JSON в body HTTP-запроса.
 app.use(express.json());
 
+app.use(async (req, res, next) => {
+  const allTitle = await CourseModel.find().populate('lecturesId').lean();
+  res.locals.title = allTitle;
+  next();
+});
+
 app.use((req, res, next) => {
   const { user } = req.session;
   if (user) {
@@ -75,7 +81,6 @@ app.use('/logout', logoutRouter);
 app.use('/registration', regRouter);
 app.use('/partners', partnersRouter);
 app.use('/courses/lectures', lecturesRouter);
-// app.use("/", mainRouter);
 
 // Если HTTP-запрос дошёл до этой строчки, значит ни один из ранее встречаемых рутов не ответил на запрос. Это значит, что искомого раздела просто нет на сайте. Для таких ситуаций используется код ошибки 404. Создаём небольшое middleware, которое генерирует соответствующую ошибку.
 // app.use((req, res, next) => {
