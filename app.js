@@ -82,7 +82,7 @@ app.use('/courses', coursesRouter);
 app.use('/logout', logoutRouter);
 app.use('/registration', regRouter);
 app.use('/partners', partnersRouter);
-app.use('/courses/lectures', lecturesRouter);
+app.use('/courses', lecturesRouter);
 
 // Если HTTP-запрос дошёл до этой строчки, значит ни один из ранее встречаемых рутов не ответил на запрос. Это значит, что искомого раздела просто нет на сайте. Для таких ситуаций используется код ошибки 404. Создаём небольшое middleware, которое генерирует соответствующую ошибку.
 // app.use((req, res, next) => {

@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
 
 module.exports = router;
 
-router.get('/:id/lesson/:lessonId', async (req, res) => {
+router.get('/:id/lectures/:lessonId', async (req, res) => {
   // const currentCourses = await CourseModel.findById(req.params.id);
   const currentLecture = await LecturesModel.findById(req.params.lessonId);
 
