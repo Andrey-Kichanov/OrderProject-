@@ -126,6 +126,36 @@
   color: #7750ad;
 }
 
+.container-courseList{
+  display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-courseList-items{
+  width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.little-course{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.contaner-courses-item-img{
+  box-shadow: 0 7px 38px rgb(87 67 142 / 60%);
+  border: rgb(150, 142, 142) 1px solid;
+}
+
+.container-main-img{
+width: 400px;
+}
+
 .contaner-courses-item-lecture{
   cursor: pointer;
   /* padding: 10px 13px 10px 30px;
@@ -452,12 +482,18 @@ span.psw {
   padding-top: 16px;
 }
 
+#container-partners{
+  display: flex;
+  flex-direction: row;
+}
+
 .question-container {
   display: flex;
   flex-direction: row;
   border-width: 1;
   border-color: #572f8e;
   border-style: solid;
+  min-height: fit-content;
 }
 /* Модальный (фон) */
 .modal {
@@ -513,6 +549,21 @@ span.psw {
 
 .menu-question {
   max-width: 23%;
+}
+
+.lecturesN {
+  cursor: pointer;
+  background-color: #572f8e;
+
+}
+
+.lecturesN:hover{
+  opacity: 0.8;
+}
+
+.menu-lectures {
+  border-right: 3px solid #572f8e;
+  min-width: fit-content;
 }
 
 .questButton {

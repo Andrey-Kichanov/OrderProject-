@@ -1,26 +1,29 @@
+{{#if user}}
 <div class="question-container">
   <div class="menu-lectures">
     <div class="lecturesList">
       
     {{#if allLectures}}
-        <div class="couseList">{{allLectures.title}}</div>
+        <div class="couseList" id="{{allLectures._id}}">{{allLectures.title}}</div>
+        <div class="container-courses-list">
         {{#each allLectures.lecturesId}}
-            <div class="lecturesN" style="background: cyan;"  id="{{this._id}}">{{this.title}}</div>
+            <div class="lecturesN" style="background: #572f8e;"  id="{{this._id}}">{{this.title}}</div>
         {{/each}}
+        </div>
     {{/if}}
   </div>
     </div>
   <div class="lecturesDiv">
-      {{#if currentLecture}}
-        {{#if vlink}}
-            <video src={{vlink}} width="500px" controls="controls"></video>
-        {{/if}}
-        <div>{{currentLecture}}</div>
-      {{/if}}
+    <div class="lecture-text">
+    </div>
+    <div class="lectures-video">
+
+    </div>
   </div>
 </div>
-
-
+{{else}}
+<h1 style="text-align: center;">Вам нужно зарегистрироваться или войти в ваш аккаунт, чтобы увидеть лекции</h1>
+{{/if}}
 
 
 
