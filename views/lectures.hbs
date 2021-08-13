@@ -1,3 +1,5 @@
+
+{{#if user}}
 {{#if currentLecture}}
 <div>
   {{currentLecture.title}}
@@ -8,4 +10,7 @@
   {{/if}}
 </div>
 <div class="container-description">{{currentLecture.description }}</div>
+{{/if}}
+{{else}}
+<div>Вам нужно зарегистрироваться или зайти в аккаунт!</div>
 {{/if}}

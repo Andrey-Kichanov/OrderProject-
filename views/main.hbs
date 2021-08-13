@@ -4,42 +4,52 @@
     clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<div class="container" style="width: 1000px;">
-  <div class="container-of-all-features">
-  <div class="container-of-feature">
-    <div class="features-icon">
-      <img src="/img/features/feature.svg">
+<div class="container-courses">
+  <div class="contaner-courses-item">
+    {{#each allTitle}}
+    <div class="course">
+      <div>
+        <h4>{{this.title}}</h4>
+      </div>
+      <div class="contaner-courses-item-img">
+        <img src="/img/course/{{this.title}}.jpg" class="container-main-img">
+      </div>
+      <div class="contaner-courses-item-lecture">
+      {{#each this.lecturesId}}
+      <div class="lecture"><a href="/courses/lectures/{{this._id}}" class="lecture-main-item">{{this.title}}</a></div>
+      {{/each}}
+      </div>
     </div>
-    <div class="features-item">Высокое качество заботы о пациентах по мировым стандартам</div>
-  </div>
-  <div class="container-of-feature">
-    <div class="features-icon">
-      <img src="/img/features/feature_2.svg">
-    </div>
-    <div class="features-item">Высококлассные специалисты во всех областях.
-      Постоянное совершенствование методов лечения и использование международных практик</div>
-  </div>
-  <div class="container-of-feature">
-    <div class="features-icon">
-      <img src="/img/features/feature_3.svg">
-    </div>
-    <div class="features-item">Современное экспертное оборудование и передовые технологии диагностики и лечения</div>
-  </div>
-  <div class="container-of-feature">
-    <div class="features-icon">
-      <img src="/img/features/feature_4.svg">
-    </div>
-    <div class="features-item">Мы заботимся о Вашей безопасности, даем чувство уверенности и спокойствия</div>
-  </div>
-  </div>
-  <div class="container-courses">
-  {{#each allTitle}}
-  <div class="course">
-    <div>{{this.title}}</div>
-    {{#each this.lecturesId}}
-    <div class="lecture"><a href="/courses/{{allTitle.title}}/lectures/{{this.title}}">{{this.title}}</a></div>
     {{/each}}
   </div>
-  {{/each}}
+</div>
+
+<div class="container" style="width: 1000px;">
+  <div class="container-of-all-features">
+    <div class="container-of-feature">
+      <div class="features-icon">
+        <img src="/img/features/feature.svg">
+      </div>
+      <div class="features-item">Высокое качество заботы о пациентах по мировым стандартам</div>
+    </div>
+    <div class="container-of-feature">
+      <div class="features-icon">
+        <img src="/img/features/feature_2.svg">
+      </div>
+      <div class="features-item">Высококлассные специалисты во всех областях.
+        Постоянное совершенствование методов лечения и использование международных практик</div>
+    </div>
+    <div class="container-of-feature">
+      <div class="features-icon">
+        <img src="/img/features/feature_3.svg">
+      </div>
+      <div class="features-item">Современное экспертное оборудование и передовые технологии диагностики и лечения</div>
+    </div>
+    <div class="container-of-feature">
+      <div class="features-icon">
+        <img src="/img/features/feature_4.svg">
+      </div>
+      <div class="features-item">Мы заботимся о Вашей безопасности, даем чувство уверенности и спокойствия</div>
+    </div>
   </div>
 </div>
