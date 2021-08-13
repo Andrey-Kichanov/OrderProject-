@@ -1,18 +1,17 @@
 const selectQuestion = document.querySelector('.menu-question');
-const selectLectures = document.querySelector('.lecturesList');
+const selectLectures = document.querySelector('.container-courses-list');
 const answersPlace = document.querySelector('.answers');
 const lecturesPlace = document.querySelector('.lecturesDiv');
-const regForm = document.querySelector('.login-html');
+const placeforVideo = document.querySelector('.lectures-video');
 const regName = document.querySelector('#user');
 const regPassword = document.querySelector('#regPass');
 const regEmail = document.querySelector('#regEmail');
 const regRepPassword = document.querySelector('#regRepPass');
 const regPlace = document.querySelector('#btnreg');
-const modalForm = document.querySelector('#id01');
+const placeForLecture = document.querySelector('.lecture-text');
 const loginEmail = document.querySelector('#loginEmail');
 const loginPass = document.querySelector('#loginPass');
 const logPlace = document.querySelector('#bntLog');
-console.log(logPlace);
 
 regPlace.addEventListener('click', async (event) => { // регистрация
   event.preventDefault();
@@ -91,18 +90,25 @@ logPlace.addEventListener('click', async (event) => {
     window.location.href = 'http://localhost:5000';
   }
 });
-console.log("selectLectures----",selectLectures);
-selectLectures?.addEventListener('click', async (event) => { // вывод вопросов-ответов
-  // console.log(event.target.id);
+
+selectLectures.addEventListener('click', async (event) => { // вывод лекций
+  console.log(event.target.parentNode.parentNode);
+  const courseId = event.target.parentNode.parentNode.firstElementChild.id;
   const buttonId = event.target.id;
-console.log("-------->",buttonId);
-  const response = await fetch(`/courses/${buttonId}`, {
-    method: 'POST',
+
+  console.log(buttonId);
+
+  const response = await fetch(`/courses/lectures/${courseId}/lesson/${buttonId}`, {
+    method: 'GET',
   });
 
   const result = await response.json();
+  placeforVideo.innerHTML = '';
   if (result) {
-    //console.log(result.urrentLectures);
-    lecturesPlace.innerHTML = result.currentLectures.description;
+    placeForLecture.innerHTML = result.description;
+    if (result.videoLink) {
+      placeforVideo.innerHTML = `<video src=${result.videoLink} width="500px" controls="controls"></video>`;
+    }
   }
 });
+

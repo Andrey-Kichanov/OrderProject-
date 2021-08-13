@@ -1,8 +1,14 @@
+    <div class="container-courseList">
+      <div class="container-courseList-items">
     {{#each allCourses}}
-
-    <div class="couseList">{{this.title}}</div>
+    <div class="little-course">
+    <h4 class="couseList">{{this.title}}</h4>
     <div class="contaner-courses-item-img">
         <a href='/courses/lectures/{{this._id}}'><img src="/img/course/{{this.title}}.jpg" class="container-main-img"></a>
      </div>
+     </div>
      {{/each}}
+      </div>
+    </div>
+
     

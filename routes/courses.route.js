@@ -12,8 +12,4 @@ router
     res.render('course', { currentCourse, allCourses });
   });
 
-
-
-
-  
 module.exports = router;
