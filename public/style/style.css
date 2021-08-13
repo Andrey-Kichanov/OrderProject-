@@ -57,12 +57,25 @@
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-width: 300px;
   max-width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #f5f3f8;
+}
+
+.container-of-feature{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center
+}
+
+.container-of-all-features{
+  display: flex;
+  flex-direction: row;
+  margin: 30px
 }
 
 .course {
