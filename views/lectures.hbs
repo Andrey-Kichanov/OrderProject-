@@ -1,11 +1,11 @@
-
 {{#if currentLecture}}
 <div>
-{{currentLecture.title}}
+  {{currentLecture.title}}
 </div>
-{{#if vlink}}
-<video src={{vlink}} width="500px" controls="controls"></video>
-{{/if}}
-<div Content-Type: text/css; charset=utf-8>апр{{currentLecture.description }}апрап</div>
-  
+<div class="container-video">
+  {{#if vlink}}
+  <video src={{vlink}} width="500px" controls="controls"></video>
+  {{/if}}
+</div>
+<div class="container-description">{{currentLecture.description }}</div>
 {{/if}}
